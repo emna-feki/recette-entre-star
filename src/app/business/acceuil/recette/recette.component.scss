@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  mat-card {
+    width: 500px;
+
+    mat-card-header ::ng-deep .mat-card-header-text {
+      width: 100%;
+    }
+
+    mat-card-title {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    mat-card-actions {
+      mat-icon.aimee {
+        color: red;
+      }
+    }
+
+  }
+
+}
+

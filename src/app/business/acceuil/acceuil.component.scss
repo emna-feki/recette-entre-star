@@ -1,0 +1,9 @@
+:host {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  // 50px est la hauteur du header
+  height: calc(100% - 50px);
+
+  background-color: crimson;
+}

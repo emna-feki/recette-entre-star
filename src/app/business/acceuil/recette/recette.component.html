@@ -1,0 +1,35 @@
+<mat-card class="example-card">
+
+  <mat-card-header>
+    <!--    <div mat-card-avatar class="example-header-image"></div>-->
+
+    <mat-card-title>
+      <span>{{recette.titre}}</span>
+      <flag-icon [country]="recette.pays"></flag-icon>
+    </mat-card-title>
+
+    <mat-card-subtitle>{{recette.description}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <img mat-card-image [src]="recette.photoUrl" alt="Photo de la recette">
+
+  <mat-card-content *ngIf="descriptionDetailleAffiche">
+    <p>
+      {{recette.descriptionDetaille}}
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button (click)="toggleLike(recette)">
+      <mat-icon aria-label="Nombre de j'aime" [ngClass]="{aimee: aimeeParUtilisateur}">favorite</mat-icon>
+      {{recette.nombreDeLike}}
+    </button>
+    <button mat-button (click)="patager(recette)">Partager</button>
+    <button mat-button (click)="afficherCommentaires(recette)">Commentaire</button>
+    <button mat-button (click)="toggleShowDetails()">
+      <span *ngIf="!descriptionDetailleAffiche">Détail</span>
+      <span *ngIf="descriptionDetailleAffiche">Masquer Détail</span>
+    </button>
+
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,26 @@
+<h1 class="cree-compte">Crée un compte</h1>
+
+<form [formGroup]="signupForm">
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Nom" formControlName="nom">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Prénom" formControlName="prenom">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Adresse mail" formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Mot de passe" type="password" formControlName="password">
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="accent" [disabled]="signupForm.invalid" (click)="createUser()">Créer un compte
+  </button>
+
+</form>
+<br>
+<a href="/auth/login">Retour</a>

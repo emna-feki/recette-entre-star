@@ -1,0 +1,18 @@
+<h1 class="cree-compte">Connexion</h1>
+
+<form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Adresse mail" formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Mot de passe" type="password" formControlName="password">
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="accent" type="submit"
+          [disabled]="signinForm.invalid">Connexion
+  </button>
+</form>
+<br>
+<a href="/auth/signup">Crée un compte</a>
